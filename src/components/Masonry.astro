@@ -1,0 +1,50 @@
+<div data-js="container">
+  <slot />
+</div>
+
+<script>
+  import { MasonryGrid } from '@egjs/grid';
+
+  const element = document.querySelector(
+    '[data-js="container"]'
+  ) as HTMLDivElement;
+
+  if (!element) {
+    throw new Error('No container element');
+  }
+
+  const grid = new MasonryGrid(element, {
+    defaultDirection: 'end',
+    gap: 5,
+    align: 'justify',
+    column: 0,
+    columnSize: 0,
+    columnSizeRatio: 0,
+  });
+
+  grid.renderItems({});
+</script>
+
+<style>
+  [data-js='container'] {
+    width: 300px;
+  }
+
+  @media (min-width: 768px) {
+    [data-js='container'] {
+      width: 605px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    [data-js='container'] {
+      width: 910px;
+    }
+  }
+
+  @media (min-width: 1230px) {
+    [data-js='container'] {
+      width: 1215px;
+    }
+  }
+</style>

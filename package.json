@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.3.2"
+    "@egjs/grid": "^1.14.2",
+    "astro": "^3.3.2",
+    "astro-imagetools": "^0.9.0"
   }
 }
